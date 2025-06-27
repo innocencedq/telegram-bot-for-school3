@@ -17,3 +17,4 @@ app/assets/vov_files/yachmenev.jpg
 config.py
 database.db
 app/components/logs/logs.log
+__pycache__
