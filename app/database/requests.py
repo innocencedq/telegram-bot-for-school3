@@ -139,7 +139,7 @@ async def check_admin(user):
             sql_res = await session.scalar(select(Admin).where(Admin.tg_id == user))
             await redis.set(name="check_admin:" + str(user), value=1 if sql_res else 0, ex=21600)
     else:
-        return bool(res)
+        return bool(int(res))
 
 
 async def delete_user(user):
